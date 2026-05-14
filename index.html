@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 導入訓練營｜GLN × Betterology</title>
+<meta name="description" content="AI 導入訓練營：5/26-28 三日工作坊。學習目標、課程安排、報名資料填寫。" />
+<meta property="og:title" content="AI 導入訓練營｜種子員工三日工作坊" />
+<meta property="og:description" content="2026/5/26-28 · 高雄苓雅區和平路 · 把兩公司七部門的隱性知識整理成可落地的 AI 工作流" />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* GLN Visual System — 單色極簡：暖灰褐 #938578 主色 + 橄欖綠輔色 + 米白底 */
+    --bg: #FAF7F2;          /* warm off-white background */
+    --paper: #FFFFFF;        /* white card */
+    --ink: #6B5D52;          /* darker taupe — headings */
+    --ink-soft: #938578;     /* GLN brand color — body text */
+    --ink-mute: #B8AB9E;     /* light taupe — captions */
+    --line: #E8E1D6;         /* taupe line */
+    --accent: #7A8B5A;       /* 橄欖綠 olive green */
+    --accent-soft: #A8B388;  /* lighter olive */
+    --highlight: #938578;    /* warm taupe (single-color minimalism) */
+    --warn: #A85042;         /* muted warn */
+    --warn-bg: #F4ECE6;      /* warm warn bg */
+    --ok: #7A8B5A;           /* olive ok */
+    --ok-bg: #EEF0E5;        /* light olive bg */
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.75; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  .serif { font-family: 'Noto Serif TC', serif; }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); transition: all .2s; }
+  a:hover { color: var(--highlight); border-bottom-color: var(--highlight); }
+
+  nav.topnav { position: sticky; top: 0; z-index: 50; background: rgba(250, 250, 247, 0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav.topnav .nav-inner { max-width: 900px; margin: 0 auto; padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  nav.topnav .brand { font-family: 'Noto Serif TC', serif; font-size: 16px; font-weight: 500; color: var(--accent); border: 0; }
+  nav.topnav ul { display: flex; list-style: none; gap: 22px; font-size: 13px; }
+  nav.topnav ul a { color: var(--ink-soft); border: 0; }
+  nav.topnav ul a:hover { color: var(--accent); }
+
+  .hero { padding: 80px 0 56px; text-align: center; border-bottom: 1px solid var(--line); }
+  .hero .eyebrow { font-size: 12px; letter-spacing: 0.3em; color: var(--accent-soft); text-transform: uppercase; margin-bottom: 20px; }
+  .hero h1 { font-family: 'Noto Serif TC', serif; font-size: clamp(30px, 5vw, 44px); font-weight: 500; line-height: 1.35; margin-bottom: 20px; }
+  .hero .subtitle { font-size: 15px; color: var(--ink-soft); max-width: 600px; margin: 0 auto 36px; }
+  .hero .meta { display: inline-flex; gap: 32px; flex-wrap: wrap; justify-content: center; padding: 22px 36px; background: var(--paper); border: 1px solid var(--line); }
+  .hero .meta div { text-align: left; }
+  .hero .meta .label { font-size: 10px; letter-spacing: 0.2em; color: var(--accent-soft); text-transform: uppercase; margin-bottom: 6px; }
+  .hero .meta .value { font-family: 'Noto Serif TC', serif; font-size: 15px; }
+  .countdown { display: inline-block; margin-top: 24px; padding: 10px 22px; background: var(--accent); color: white; font-size: 13px; letter-spacing: 0.05em; border-radius: 2px; }
+
+  section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+  .section-label { font-size: 11px; letter-spacing: 0.3em; color: var(--accent-soft); text-transform: uppercase; margin-bottom: 14px; text-align: center; }
+  .section-title { font-family: 'Noto Serif TC', serif; font-size: 30px; font-weight: 500; text-align: center; margin-bottom: 48px; }
+  .section-intro { text-align: center; color: var(--ink-soft); max-width: 600px; margin: -28px auto 48px; }
+
+  .warn-block { background: var(--paper); border-left: 5px solid var(--warn); padding: 28px 32px; margin-bottom: 24px; }
+  .warn-block h3 { color: var(--warn); font-family: 'Noto Serif TC', serif; font-size: 20px; font-weight: 500; margin-bottom: 12px; }
+  .warn-block .badge { display: inline-block; background: var(--warn); color: white; padding: 3px 10px; font-size: 11px; letter-spacing: 0.1em; border-radius: 2px; margin-right: 8px; }
+  .warn-block ul { list-style: none; margin-top: 12px; }
+  .warn-block ul li { padding-left: 18px; position: relative; margin-bottom: 6px; color: var(--ink); }
+  .warn-block ul li::before { content: '▸'; position: absolute; left: 0; color: var(--warn); }
+
+  .goals { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+  .goal-item { text-align: center; padding: 24px 16px; }
+  .goal-item .num { font-family: 'Noto Serif TC', serif; font-size: 36px; color: var(--highlight); margin-bottom: 12px; }
+  .goal-item h3 { font-family: 'Noto Serif TC', serif; font-size: 17px; font-weight: 500; margin-bottom: 8px; color: var(--accent); }
+  .goal-item p { color: var(--ink-soft); font-size: 14px; }
+
+  .schedule-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .day-card { background: var(--paper); border: 1px solid var(--line); padding: 28px 30px; }
+  .day-card .day-num { font-family: 'Noto Serif TC', serif; font-size: 13px; letter-spacing: 0.2em; color: var(--accent-soft); margin-bottom: 6px; }
+  .day-card .day-date { font-family: 'Noto Serif TC', serif; font-size: 22px; margin-bottom: 4px; }
+  .day-card .day-time { font-size: 12px; color: var(--ink-mute); margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+  .day-card .day-theme { font-family: 'Noto Serif TC', serif; font-size: 16px; margin-bottom: 14px; color: var(--accent); font-weight: 500; }
+  .day-card ul { list-style: none; }
+  .day-card ul li { padding-left: 18px; position: relative; margin-bottom: 8px; color: var(--ink-soft); font-size: 14px; }
+  .day-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent-soft); }
+  .day-card .time-block { background: #F4EFE6; padding: 6px 10px; font-size: 11px; color: var(--accent); margin: 12px 0 6px; letter-spacing: 0.05em; }
+
+  .info-table { width: 100%; border-collapse: collapse; background: var(--paper); }
+  .info-table th, .info-table td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .info-table th { width: 30%; background: #F4EFE6; color: var(--accent); font-weight: 500; }
+
+  .form-section { background: #F4EFE6; }
+  .form-deadline { display: inline-block; background: var(--warn); color: white; padding: 6px 18px; font-size: 12px; letter-spacing: 0.1em; margin: 12px 0; }
+  .form-wrapper { background: var(--paper); border: 1px solid var(--line); padding: 40px 44px; margin-top: 28px; }
+  .form-section-title { font-family: 'Noto Serif TC', serif; font-size: 14px; letter-spacing: 0.15em; color: var(--accent); margin: 32px 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-weight: 500; }
+  .form-section-title:first-child { margin-top: 0; }
+  .form-group { margin-bottom: 22px; }
+  .form-label { display: block; font-size: 14px; color: var(--ink); margin-bottom: 8px; font-weight: 400; }
+  .form-label .req { color: var(--warn); margin-left: 4px; }
+  .form-helper { font-size: 12px; color: var(--ink-mute); margin-top: 4px; line-height: 1.5; }
+  .form-input, .form-textarea, .form-select { width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: 2px; font-family: inherit; font-size: 14px; color: var(--ink); background: var(--bg); transition: border-color .2s; }
+  .form-input:focus, .form-textarea:focus, .form-select:focus { outline: none; border-color: var(--accent); background: var(--paper); }
+  .form-textarea { resize: vertical; min-height: 80px; }
+  .form-options { display: flex; flex-direction: column; gap: 8px; }
+  .form-option { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; border: 1px solid var(--line); background: var(--bg); cursor: pointer; transition: all .15s; font-size: 14px; }
+  .form-option:hover { border-color: var(--accent-soft); background: var(--paper); }
+  .form-option input[type="radio"], .form-option input[type="checkbox"] { margin-top: 4px; accent-color: var(--accent); }
+  .form-option input:checked + span { color: var(--accent); font-weight: 500; }
+  .form-option:has(input:checked) { border-color: var(--accent); background: var(--paper); }
+  .submit-row { text-align: center; margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .submit-btn { display: inline-block; padding: 14px 48px; background: var(--accent); color: white; border: 0; cursor: pointer; font-family: inherit; font-size: 14px; letter-spacing: 0.1em; transition: all .2s; }
+  .submit-btn:hover:not(:disabled) { background: var(--highlight); }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .form-status { margin-top: 16px; font-size: 13px; min-height: 20px; }
+  .form-status.error { color: var(--warn); }
+  .form-success { display: none; text-align: center; padding: 48px 32px; background: var(--ok-bg); border: 1px solid var(--ok); margin-top: 28px; }
+  .form-success.show { display: block; }
+  .form-success h3 { font-family: 'Noto Serif TC', serif; font-size: 22px; color: var(--ok); margin-bottom: 12px; }
+  .form-success p { color: var(--ink-soft); font-size: 14px; }
+
+  footer { text-align: center; padding: 48px 28px; color: var(--ink-mute); font-size: 12px; background: var(--bg); }
+  footer .signature { font-family: 'Noto Serif TC', serif; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+
+  @media (min-width: 768px) { .schedule-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; } .day-card { padding: 24px 22px; } }
+  @media (max-width: 600px) { nav.topnav ul { display: none; } .hero { padding: 56px 0 40px; } .hero .meta { gap: 20px; padding: 18px 22px; } section { padding: 56px 0; } .form-wrapper { padding: 28px 24px; } }
+  @media print { nav.topnav, .form-section, footer { display: none; } section { padding: 24px 0; page-break-inside: avoid; } body { background: white; } }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">AI 導入訓練營</a>
+    <ul>
+      <li><a href="#rules">比賽規則</a></li>
+      <li><a href="#goals">學習目標</a></li>
+      <li><a href="#schedule">三日課程</a></li>
+      <li><a href="#info">場地行政</a></li>
+      <li><a href="#form">填寫資料</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="eyebrow">GLN × Betterology · 2026 AI Transformation Bootcamp</div>
+    <h1 class="serif">AI 導入訓練營<br/>種子員工三日工作坊</h1>
+    <p class="subtitle">不是來學工具，是來把流程變輕鬆。<br/>把兩公司七部門的隱性知識整理成可落地的 AI 工作流。</p>
+    <div class="meta">
+      <div><div class="label">Dates</div><div class="value">2026 · 5/26 – 5/28</div></div>
+      <div><div class="label">Venue</div><div class="value">高雄市苓雅區和平路</div></div>
+      <div><div class="label">Seats</div><div class="value">12 位種子員工</div></div>
+    </div>
+    <div><div class="countdown">⏰ 表單截止：2026/5/22（五）23:59</div></div>
+  </div>
+</header>
+
+<section id="rules" style="background:var(--warn-bg);">
+  <div class="container">
+    <div class="warn-block">
+      <h3><span class="badge">必讀</span>D3 創意大賽規則：全員必須參加</h3>
+      <p style="margin-bottom:8px;">5/28（四）下午舉行「AI 創意應用大賽」，每位種子員工必須上台 demo 5 分鐘自己的 AI 工作流作品，並接受 2 分鐘 QA。</p>
+      <ul>
+        <li><strong>報名費</strong>：每人賽前繳 <strong>NT$150</strong> 進獎金池，<strong>公司加碼 NT$150</strong>（總計 NT$300/人）</li>
+        <li><strong>獎金池</strong>：12 人 × NT$300 = <strong>NT$3,600</strong>，<strong>冠軍獨拿</strong></li>
+        <li><strong>評審</strong>：Carol 加權投票（×3） + 全體種子員工互評（每人 ×1），<strong>不能投自己</strong></li>
+        <li><strong>投票工具</strong>：Sli.do 匿名 poll</li>
+        <li><strong>繳費</strong>：5/22（五）前轉帳 Lyn / 5/26 現場交現金</li>
+        <li><strong>例外</strong>：Mimi 因 5/27 法院開庭僅出席 5/26，不參與 D3 比賽、不繳費、不投票</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="goals">
+  <div class="container">
+    <div class="section-label">Learning Goals</div>
+    <h2 class="section-title serif">三日學習目標</h2>
+    <div class="goals">
+      <div class="goal-item"><div class="num">01</div><h3>建立 AI 架構觀念</h3><p>理解大模型、Agent、知識庫、工具串接四者的角色與分工，找到適合自己工作的切入點。</p></div>
+      <div class="goal-item"><div class="num">02</div><h3>共識基礎建設</h3><p>兩公司一起定下「檔案命名 / 工作流程 / 知識庫」v1.0 標準，讓 AI 真正能進到日常工作。</p></div>
+      <div class="goal-item"><div class="num">03</div><h3>個人作品落地</h3><p>每位種子員工帶回 1 個可在 6 月部門落地的 AI 工作流 MVP，承諾 6/30 前正式上線。</p></div>
+      <div class="goal-item"><div class="num">04</div><h3>跨部門生態圈</h3><p>12 位種子員工建立跨部門 AI 學習社群，6-9 月持續互助、共學、共創。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule">
+  <div class="container">
+    <div class="section-label">3-Day Schedule</div>
+    <h2 class="section-title serif">三日課程安排</h2>
+    <div class="schedule-grid">
+      <div class="day-card">
+        <div class="day-num">Day 01</div>
+        <div class="day-date">5/26 <span style="font-size:13px;color:var(--ink-mute);">（二）</span></div>
+        <div class="day-time">10:00 – 18:00｜AI 顧問講師現場帶班</div>
+        <div class="day-theme">AI 全景沉浸</div>
+        <div class="time-block">上午 10:00-12:00</div>
+        <ul><li>開場 + 痛點上牆</li><li>AI 架構與觀念</li><li>大模型 / Agent / 知識庫</li></ul>
+        <div class="time-block">下午 13:30-18:00</div>
+        <ul><li>工具實機示範①：生活化應用</li><li>工具實機示範②：進階串接</li><li>Claude / GPT / NotebookLM / n8n / Notion AI</li></ul>
+      </div>
+      <div class="day-card">
+        <div class="day-num">Day 02</div>
+        <div class="day-date">5/27 <span style="font-size:13px;color:var(--ink-mute);">（三）</span></div>
+        <div class="day-time">09:30 – 18:00｜Carol 帶班</div>
+        <div class="day-theme">用 AI 共創基礎建設 + 個人工作流</div>
+        <div class="time-block">上午｜團隊基礎建設</div>
+        <ul><li>檔案命名規則工作坊</li><li>工作流程梳理（3 組分線）</li><li>AI 起草 → 學員精修</li></ul>
+        <div class="time-block">下午｜個人 AI 工作流</div>
+        <ul><li>NotebookLM 知識庫實作</li><li>自製 AI 工作流（Carol 桌邊輔導）</li><li>異質配對交流</li></ul>
+      </div>
+      <div class="day-card">
+        <div class="day-num">Day 03</div>
+        <div class="day-date">5/28 <span style="font-size:13px;color:var(--ink-mute);">（四）</span></div>
+        <div class="day-time">09:30 – 18:00｜Carol 帶班</div>
+        <div class="day-theme">成果分享 + 創意比賽</div>
+        <div class="time-block">上午｜團體成果</div>
+        <ul><li>3 組流程圖發表</li><li>知識庫初版發表</li><li>比賽最後優化（Carol 1v1）</li></ul>
+        <div class="time-block">下午｜創意大賽 🏆</div>
+        <ul><li>12 人 × 7 分鐘 demo + QA</li><li>Sli.do 全員投票</li><li>頒獎 + 6 月落地承諾簽署</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <div class="container">
+    <div class="section-label">Venue & Logistics</div>
+    <h2 class="section-title serif">場地與行政</h2>
+    <table class="info-table">
+      <tr><th>地點</th><td>高雄市苓雅區和平路（詳細地址另由 Lyn 發 LINE 通知）</td></tr>
+      <tr><th>集合方式</th><td>每日 09:50 直接到和平路場地，<strong>不需先進公司</strong></td></tr>
+      <tr><th>學員自備</th><td>個人筆電（含充電器）、原子筆、便利貼（茶水點心由公司準備）</td></tr>
+      <tr><th>午餐</th><td>三日全包，依下方表單飲食偏好統一訂購</td></tr>
+      <tr><th>下午茶 + 飲料</th><td>每日 14:30-15:00 自由取用</td></tr>
+      <tr><th>住宿（如需要）</th><td>由 Lyn 統一安排，請於下方表單勾選</td></tr>
+      <tr><th>聯絡窗口</th><td>主辦：Carol Tang｜行政副手：Lyn Yang｜緊急應變：Sonia Lin</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="form" class="form-section">
+  <div class="container">
+    <div class="section-label">Pre-Workshop Form</div>
+    <h2 class="section-title serif">種子員工資料填寫</h2>
+    <p class="section-intro">請於 5/22（五）前花 3 分鐘填妥，<strong>無須回信</strong>。回覆會自動進入 Carol 的追蹤表。</p>
+    <div style="text-align:center;"><span class="form-deadline">⏰ 截止：2026/5/22（五）23:59</span></div>
+
+    <div class="form-success" id="form-success">
+      <h3>🎉 已收到你的回覆</h3>
+      <p>謝謝你！Carol 會在 5/24 前統一回覆三日課表細節與場地集合資訊。<br/>如有臨時變動，請直接 LINE 或 Email Carol。</p>
+    </div>
+
+    <form class="form-wrapper" id="signup-form">
+      <div class="form-section-title">1 · 基本資料</div>
+      <div class="form-group"><label class="form-label">姓名<span class="req">*</span></label><input type="text" name="name" class="form-input" required placeholder="例：Sonia Lin" /></div>
+      <div class="form-group"><label class="form-label">Email<span class="req">*</span></label><input type="email" name="email" class="form-input" required placeholder="name@goodlivingnotes.com / @enlightom.com" /></div>
+      <div class="form-group">
+        <label class="form-label">公司<span class="req">*</span></label>
+        <div class="form-options">
+          <label class="form-option"><input type="radio" name="company" value="GLN 好感生活提案" required /><span>GLN 好感生活提案</span></label>
+          <label class="form-option"><input type="radio" name="company" value="Betterology 好研所" /><span>Betterology 好研所</span></label>
+          <label class="form-option"><input type="radio" name="company" value="好感集團" /><span>好感集團（跨公司行政）</span></label>
+        </div>
+      </div>
+      <div class="form-group"><label class="form-label">部門 / 職務<span class="req">*</span></label><input type="text" name="department" class="form-input" required placeholder="例：人事主管、設計總監、客服訂單" /></div>
+
+      <div class="form-section-title">2 · 出席與飲食</div>
+      <div class="form-group">
+        <label class="form-label">你會出席的天數？<span class="req">*</span></label>
+        <div class="form-options">
+          <label class="form-option"><input type="checkbox" name="days" value="5/26（二）AI 講師全日帶班 10:00-18:00" /><span>5/26（二）｜AI 講師全日帶班 10:00-18:00</span></label>
+          <label class="form-option"><input type="checkbox" name="days" value="5/27（三）團隊基礎建設 + 個人 AI 工作流" /><span>5/27（三）｜團隊基礎建設 + 個人 AI 工作流</span></label>
+          <label class="form-option"><input type="checkbox" name="days" value="5/28（四）成果分享 + 創意比賽" /><span>5/28（四）｜成果分享 + 創意比賽（<strong>全員必須參加</strong>）</span></label>
+        </div>
+        <div class="form-helper">至少勾選一天</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">午餐偏好<span class="req">*</span></label>
+        <div class="form-options">
+          <label class="form-option"><input type="radio" name="lunch" value="葷食" required /><span>葷食</span></label>
+          <label class="form-option"><input type="radio" name="lunch" value="素食（全素）" /><span>素食（全素）</span></label>
+          <label class="form-option"><input type="radio" name="lunch" value="蛋奶素" /><span>蛋奶素</span></label>
+          <label class="form-option"><input type="radio" name="lunch" value="其他（請於最後欄說明）" /><span>其他（請於最後欄說明）</span></label>
+        </div>
+      </div>
+
+      <div class="form-section-title">3 · 學習盤點</div>
+      <div class="form-group">
+        <label class="form-label">你目前的 AI 使用程度<span class="req">*</span></label>
+        <div class="form-options">
+          <label class="form-option"><input type="radio" name="aiLevel" value="1 - 幾乎沒用過" required /><span><strong>1</strong> — 幾乎沒用過</span></label>
+          <label class="form-option"><input type="radio" name="aiLevel" value="2 - 偶爾問 ChatGPT / Claude / Gemini" /><span><strong>2</strong> — 偶爾問 ChatGPT / Claude / Gemini</span></label>
+          <label class="form-option"><input type="radio" name="aiLevel" value="3 - 已開始整合進部分工作" /><span><strong>3</strong> — 已開始整合進部分工作</span></label>
+          <label class="form-option"><input type="radio" name="aiLevel" value="4 - 已整合進日常工作流程" /><span><strong>4</strong> — 已整合進日常工作流程</span></label>
+          <label class="form-option"><input type="radio" name="aiLevel" value="5 - 進階使用（會寫 prompt、串多工具、用 Project / Agent）" /><span><strong>5</strong> — 進階使用（會寫 prompt、串多工具、用 Project / Agent）</span></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">你目前工作中最想用 AI 解決的 1-3 個痛點<span class="req">*</span></label>
+        <textarea name="painPoints" class="form-textarea" required placeholder="例：每月對帳要花 10h 拆 3 個 Excel 表"></textarea>
+        <div class="form-helper">請描述「什麼工作」「多久重複一次」「每次花多久」</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">三日課程後你期待帶走什麼？<span class="req">*</span></label>
+        <textarea name="expectations" class="form-textarea" required placeholder="例：想學會用 NotebookLM 把人事規章變成可查詢知識庫"></textarea>
+        <div class="form-helper">可寫具體工具、可帶回部門的方法、或一個能解決的痛點</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">你最想問講師的 1-3 個問題<span class="req">*</span></label>
+        <textarea name="questions" class="form-textarea" required placeholder="例：AI 如何串接我目前用的工具？小公司導入 AI 從哪一步開始？"></textarea>
+        <div class="form-helper">5/23 前 Carol 會把全員問題整理給講師備課</div>
+      </div>
+
+      <div class="form-section-title">4 · 行政</div>
+      <div class="form-group"><label class="form-label">交通：出發地與方式<span class="req">*</span></label><input type="text" name="transport" class="form-input" required placeholder="例：南區開車 / 公司步行 / 高鐵左營 → 計程車" /></div>
+      <div class="form-group">
+        <label class="form-label">住宿需求<span class="req">*</span></label>
+        <div class="form-options">
+          <label class="form-option"><input type="radio" name="lodging" value="不需要" required /><span>不需要</span></label>
+          <label class="form-option"><input type="radio" name="lodging" value="需要 5/26 晚" /><span>需要 5/26（二）晚</span></label>
+          <label class="form-option"><input type="radio" name="lodging" value="需要 5/27 晚" /><span>需要 5/27（三）晚</span></label>
+          <label class="form-option"><input type="radio" name="lodging" value="兩晚都需要" /><span>兩晚都需要</span></label>
+        </div>
+      </div>
+
+      <div class="form-section-title">5 · 其他（選填）</div>
+      <div class="form-group">
+        <label class="form-label">其他想讓 Carol 知道的事</label>
+        <textarea name="others" class="form-textarea" placeholder="身體狀況、行程限制、食物過敏忌口、其他需求…"></textarea>
+      </div>
+
+      <div class="submit-row">
+        <button type="submit" class="submit-btn" id="submit-btn">送出資料</button>
+        <div class="form-status" id="form-status"></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="signature serif">Carol Tang</div>
+    <div>好感生活提案 GLN · 恩萊頓 Betterology · CEO</div>
+    <div style="margin-top:14px; font-size:10px; letter-spacing:0.2em; color:var(--accent-soft); text-transform:uppercase;">AI Transformation Project · 2026 Apr – Sep</div>
+    <div style="margin-top:8px; font-size:10px; color:var(--ink-mute);">Last updated: 2026-05-14</div>
+  </div>
+</footer>
+
+<script>
+  // Apps Script Web App URL（已連接到 AI訓練營_回覆_2026-05 Google Sheet）
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyl3_3xVawqImRcrhHJlb9mJfl9CVvbfoNCYTUYoYZkRZCFUG50ZaNdqCqW5ToK-QyU-g/exec';
+
+  const form = document.getElementById('signup-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const statusEl = document.getElementById('form-status');
+  const successEl = document.getElementById('form-success');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.textContent = '';
+    statusEl.classList.remove('error');
+
+    const days = form.querySelectorAll('input[name="days"]:checked');
+    if (days.length === 0) {
+      statusEl.textContent = '⚠️ 請至少勾選一個出席天數';
+      statusEl.classList.add('error');
+      return;
+    }
+
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      department: formData.get('department'),
+      days: formData.getAll('days'),
+      lunch: formData.get('lunch'),
+      aiLevel: formData.get('aiLevel'),
+      painPoints: formData.get('painPoints'),
+      expectations: formData.get('expectations'),
+      questions: formData.get('questions'),
+      transport: formData.get('transport'),
+      lodging: formData.get('lodging'),
+      others: formData.get('others'),
+    };
+
+    if (APPS_SCRIPT_URL.startsWith('PASTE_')) {
+      statusEl.textContent = '⚠️ 表單尚未啟用，請聯絡 Carol';
+      statusEl.classList.add('error');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送出中...';
+
+    try {
+      const response = await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+
+      if (result.success) {
+        form.style.display = 'none';
+        successEl.classList.add('show');
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        statusEl.textContent = '❌ 送出失敗：' + (result.error || '未知錯誤，請聯絡 Carol');
+        statusEl.classList.add('error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = '送出資料';
+      }
+    } catch (err) {
+      statusEl.textContent = '❌ 送出失敗（網路問題）：' + err.message;
+      statusEl.classList.add('error');
+      submitBtn.disabled = false;
+      submitBtn.textContent = '送出資料';
+    }
+  });
+</script>
+
+</body>
+</html>
