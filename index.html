@@ -10,28 +10,41 @@
 <meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 <style>
   :root {
-    /* GLN Visual System — 單色極簡：暖灰褐 #938578 主色 + 橄欖綠輔色 + 米白底 */
-    --bg: #FAF7F2;          /* warm off-white background */
-    --paper: #FFFFFF;        /* white card */
-    --ink: #6B5D52;          /* darker taupe — headings */
-    --ink-soft: #938578;     /* GLN brand color — body text */
-    --ink-mute: #B8AB9E;     /* light taupe — captions */
-    --line: #E8E1D6;         /* taupe line */
-    --accent: #7A8B5A;       /* 橄欖綠 olive green */
-    --accent-soft: #A8B388;  /* lighter olive */
-    --highlight: #938578;    /* warm taupe (single-color minimalism) */
-    --warn: #A85042;         /* muted warn */
-    --warn-bg: #F4ECE6;      /* warm warn bg */
-    --ok: #7A8B5A;           /* olive ok */
-    --ok-bg: #EEF0E5;        /* light olive bg */
+    /* GLN Official Brand Colors — VI Guideline 2025-08-16 */
+    --gln-olive-gray: #7C837B;       /* 主色 靜謐橄欖綠 */
+    --gln-taupe-clay: #8E877D;       /* 副色 溫潤岩灰 */
+    --gln-mist-white: #E7E4DF;       /* 底色 霧白米色 */
+    --gln-rose-clay: #C1AAA0;        /* 輔助 玫瑰陶土 */
+    --gln-ivory: #EEE1D1;            /* 輔助 象牙霧 */
+    --gln-dried-oat: #CAB491;        /* 輔助 燕麥棕（金棕）*/
+    --gln-charcoal: #383735;         /* 輔助 炭墨黑 */
+    /* Semantic aliases */
+    --bg: #FAF8F4;           /* warm off-white background */
+    --paper: #FFFFFF;
+    --ink: #383735;          /* charcoal moss — main text */
+    --ink-soft: #7C837B;     /* olive gray — body text */
+    --ink-mute: #8E877D;     /* taupe clay — captions */
+    --line: #E7E4DF;         /* mist white — dividers */
+    --accent: #7C837B;       /* olive gray — primary CTA */
+    --accent-soft: #8E877D;  /* taupe clay */
+    --highlight: #CAB491;    /* dried oat — hover/accent */
+    --warn: #A85042;
+    --warn-bg: #F4ECE6;
+    --ok: #7C837B;
+    --ok-bg: #EEE1D1;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-  body { font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.75; font-weight: 300; -webkit-font-smoothing: antialiased; }
-  .serif { font-family: 'Noto Serif TC', serif; }
+  body { font-family: 'Noto Serif TC', 'Ibarra Real Nova', serif; background: var(--bg); color: var(--ink); line-height: 1.8; font-weight: 400; letter-spacing: 0.03em; -webkit-font-smoothing: antialiased; }
+  .serif { font-family: 'Noto Serif TC', 'Ibarra Real Nova', serif; }
+  .en-serif { font-family: 'Ibarra Real Nova', 'Noto Serif TC', serif; }
+  /* GLN Logo Lockup */
+  .gln-lockup { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; }
+  .gln-mark { font-family: 'Ibarra Real Nova', 'Noto Serif TC', serif; font-weight: 400; font-size: 56px; line-height: 1; color: var(--gln-olive-gray); letter-spacing: -0.04em; }
+  .gln-tagline { font-family: 'Ibarra Real Nova', serif; font-size: 10px; letter-spacing: 0.45em; text-transform: uppercase; color: var(--gln-olive-gray); border-top: 1px solid var(--gln-olive-gray); padding-top: 8px; padding-left: 6px; }
   .container { max-width: 900px; margin: 0 auto; padding: 0 28px; }
   a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-soft); transition: all .2s; }
   a:hover { color: var(--highlight); border-bottom-color: var(--highlight); }
@@ -80,13 +93,13 @@
   .day-card ul { list-style: none; }
   .day-card ul li { padding-left: 18px; position: relative; margin-bottom: 8px; color: var(--ink-soft); font-size: 14px; }
   .day-card ul li::before { content: '—'; position: absolute; left: 0; color: var(--accent-soft); }
-  .day-card .time-block { background: #F4EFE6; padding: 6px 10px; font-size: 11px; color: var(--accent); margin: 12px 0 6px; letter-spacing: 0.05em; }
+  .day-card .time-block { background: #EEE1D1; padding: 6px 10px; font-size: 11px; color: var(--accent); margin: 12px 0 6px; letter-spacing: 0.05em; }
 
   .info-table { width: 100%; border-collapse: collapse; background: var(--paper); }
   .info-table th, .info-table td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
-  .info-table th { width: 30%; background: #F4EFE6; color: var(--accent); font-weight: 500; }
+  .info-table th { width: 30%; background: #EEE1D1; color: var(--accent); font-weight: 500; }
 
-  .form-section { background: #F4EFE6; }
+  .form-section { background: #EEE1D1; }
   .form-deadline { display: inline-block; background: var(--warn); color: white; padding: 6px 18px; font-size: 12px; letter-spacing: 0.1em; margin: 12px 0; }
   .form-wrapper { background: var(--paper); border: 1px solid var(--line); padding: 40px 44px; margin-top: 28px; }
   .form-section-title { font-family: 'Noto Serif TC', serif; font-size: 14px; letter-spacing: 0.15em; color: var(--accent); margin: 32px 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line); font-weight: 500; }
@@ -140,7 +153,11 @@
 
 <header class="hero" id="top">
   <div class="container">
-    <div class="eyebrow">GLN × Betterology · 2026 AI Transformation Bootcamp</div>
+    <div class="gln-lockup" style="margin-bottom: 32px;">
+      <span class="gln-mark">gln</span>
+      <span class="gln-tagline">Good Living Notes</span>
+    </div>
+    <div class="eyebrow en-serif">GLN × Betterology · 2026 AI Transformation Bootcamp</div>
     <h1 class="serif">AI 導入訓練營<br/>種子員工三日工作坊</h1>
     <p class="subtitle">不是來學工具，是來把流程變輕鬆。<br/>把兩公司七部門的隱性知識整理成可落地的 AI 工作流。</p>
     <div class="meta">
